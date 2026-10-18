@@ -9,7 +9,8 @@ class ListaOrdenadaID
         ListaOrdenadaID(int _tam);
         ~ListaOrdenadaID();
 
-        int BuscarPeloID(int ini, int fim, int id_buscado) const;
+        int BuscaBinaria(int ini, int fim, int id_buscado) const;
+        int BuscarPeloID(int id_buscado) const;
 
         /*int InserirNoFinal(int _id, int _idade, string _nome);
         int InserirNoInicio(int _id, int _idade, string _nome);*/ //<- vai rolar não amigão. Essa liberdade destroi a ordem!

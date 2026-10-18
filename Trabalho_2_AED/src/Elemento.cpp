@@ -18,7 +18,7 @@ humano::humano(int _id, string _nome, int _idade):Elemento(_id){
 }
 
 void humano::imprimirInfo() const{
-    cout << nome << " " << idade << endl;
+    cout << "\nID: " << getID() << "\nNome: " << getNome() << "\nIdade: " << getIdade() << "\n\n";
 }
 
 int humano::getIdade() const{return idade;}
@@ -31,5 +31,5 @@ professor::professor(int _id, string _nome, int _idade, string _especialidade, f
 }
 
 void professor::imprimirInfo() const{
-    cout << getNome() << " " << getIdade() << " " << especialidade << " " << salario << " " << carga_horaria << endl;
+    cout << "\nID: " << getID() << "\nNome: " << getNome() << "\nIdade: " << getIdade() << "\nEspecialidade: " << especialidade << "\nSalario: " << salario << "\nCarga horaria: " << carga_horaria << "\n\n";
 }

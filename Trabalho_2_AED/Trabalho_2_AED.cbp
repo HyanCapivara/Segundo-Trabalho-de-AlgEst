@@ -39,12 +39,14 @@
 		<Unit filename="include/Fila.h" />
 		<Unit filename="include/ListaNaoOrdenada.h" />
 		<Unit filename="include/ListaOrdenadaID.h" />
+		<Unit filename="include/ListaSimplesmenteEncadeada.h" />
 		<Unit filename="include/Pilha.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Elemento.cpp" />
 		<Unit filename="src/Fila.cpp" />
 		<Unit filename="src/ListaNaoOrdenada.cpp" />
 		<Unit filename="src/ListaOrdenadaID.cpp" />
+		<Unit filename="src/ListaSimplesmenteEncadeada.cpp" />
 		<Unit filename="src/Pilha.cpp" />
 		<Extensions />
 	</Project>

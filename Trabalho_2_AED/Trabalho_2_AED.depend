@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1792206715source:/home/hyan/programas/Trabalho_2_AED/main.cpp
+1792292796source:/home/hyan/programas/Trabalho_2_AED/main.cpp
 	<iostream>
 	<string>
 	"ListaNaoOrdenada.h"
@@ -7,6 +7,11 @@
 	"Pilha.h"
 	"Fila.h"
 	"Geral.h"
+	"ListaSimplesmenteEncadeada.h"
+	"ListaDuplamenteEncadeada.h"
+	"ListaDuplamenteEncadeadaCircular.h"
+	"PilhaEncadeada.h"
+	"FilaEncadeada.h"
 
 1792248339/home/hyan/programas/Trabalho_2_AED/include/ListaNaoOrdenada.h
 	"Elemento.h"
@@ -14,36 +19,36 @@
 1792240073/home/hyan/programas/Trabalho_2_AED/include/Elemento.h
 	<string>
 
-1792240073source:/home/hyan/programas/Trabalho_2_AED/src/Elemento.cpp
+1792257249source:/home/hyan/programas/Trabalho_2_AED/src/Elemento.cpp
 	"Elemento.h"
 	<iostream>
 
-1792248339source:/home/hyan/programas/Trabalho_2_AED/src/ListaNaoOrdenada.cpp
+1792258622source:/home/hyan/programas/Trabalho_2_AED/src/ListaNaoOrdenada.cpp
 	"ListaNaoOrdenada.h"
 	<iostream>
 
-1792206663source:/home/hyan/programas/Trabalho_2_AED/src/ListaOrdenadaID.cpp
+1792257242source:/home/hyan/programas/Trabalho_2_AED/src/ListaOrdenadaID.cpp
 	"ListaOrdenadaID.h"
 	<iostream>
 
-1792206514/home/hyan/programas/Trabalho_2_AED/include/ListaOrdenadaID.h
+1792256514/home/hyan/programas/Trabalho_2_AED/include/ListaOrdenadaID.h
 	"Elemento.h"
 
-1792192332source:/home/hyan/programas/Trabalho_2_AED/src/Pilha.cpp
+1792256265source:/home/hyan/programas/Trabalho_2_AED/src/Pilha.cpp
 	"Pilha.h"
 	<iostream>
 
 1792242092/home/hyan/programas/Trabalho_2_AED/include/Pilha.h
 	"ListaNaoOrdenada.h"
 
-1792244125source:/home/hyan/programas/Trabalho_2_AED/src/Fila.cpp
+1792256265source:/home/hyan/programas/Trabalho_2_AED/src/Fila.cpp
 	"Fila.h"
 	<iostream>
 
 1792248463/home/hyan/programas/Trabalho_2_AED/include/Fila.h
 	"ListaNaoOrdenada.h"
 
-1792206617source:/home/hyan/programas/Trabalho_2_AED/Geral.cpp
+1792257916source:/home/hyan/programas/Trabalho_2_AED/Geral.cpp
 	<iostream>
 	<string>
 	"ListaNaoOrdenada.h"
@@ -52,4 +57,36 @@
 	"Fila.h"
 
 1792202547/home/hyan/programas/Trabalho_2_AED/Geral.h
+
+1792288902source:/home/hyan/programas/Trabalho_2_AED/src/ListaSimplesmenteEncadeada.cpp
+	"ListaSimplesmenteEncadeada.h"
+	<iostream>
+
+1792273048/home/hyan/programas/Trabalho_2_AED/include/ListaSimplesmenteEncadeada.h
+
+1792288766source:/home/hyan/programas/Trabalho_2_AED/src/ListaDuplamenteEncadeada.cpp
+	"ListaDuplamenteEncadeada.h"
+	<iostream>
+
+1792272833/home/hyan/programas/Trabalho_2_AED/include/ListaDuplamenteEncadeada.h
+
+1792292282source:/home/hyan/programas/Trabalho_2_AED/src/ListaDuplamenteEncadeadaCircular.cpp
+	"ListaDuplamenteEncadeadaCircular.h"
+	<iostream>
+
+1792291992/home/hyan/programas/Trabalho_2_AED/include/ListaDuplamenteEncadeadaCircular.h
+
+1792292580source:/home/hyan/programas/Trabalho_2_AED/src/PilhaEncadeada.cpp
+	"PilhaEncadeada.h"
+	<iostream>
+
+1792285010/home/hyan/programas/Trabalho_2_AED/include/PilhaEncadeada.h
+	"ListaSimplesmenteEncadeada.h"
+
+1792292706source:/home/hyan/programas/Trabalho_2_AED/src/FilaEncadeada.cpp
+	"FilaEncadeada.h"
+	<iostream>
+
+1792285079/home/hyan/programas/Trabalho_2_AED/include/FilaEncadeada.h
+	"ListaDuplamenteEncadeadaCircular.h"
 

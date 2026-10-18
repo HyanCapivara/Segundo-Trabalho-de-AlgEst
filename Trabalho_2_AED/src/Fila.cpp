@@ -49,7 +49,7 @@ int Fila::desenfileirar(){
 
 void Fila::consultarInicio() const{
     if(suporte.getOcupadas() == 0)
-        cout << "fila vazia" << endl;
+        cout << "Fila vazia!\n\n";
     else
         suporte.getVetor(ini)->imprimirInfo();
 }

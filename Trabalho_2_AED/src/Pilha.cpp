@@ -15,7 +15,7 @@ int Pilha::desempilhar(){
 
 void Pilha::consultarTopo() const{
     if(suporte.getOcupadas() == 0)
-        cout << "pilha vazia" << endl;
+        cout << "Pilha vazia!\n\n";
     else
         suporte.getVetor(suporte.getOcupadas()-1)->imprimirInfo();
 }

@@ -12,12 +12,12 @@ ListaNaoOrdenada::ListaNaoOrdenada(int _tam)
 ListaNaoOrdenada::~ListaNaoOrdenada()
 {
     delete[] vetor;
-    cout << "Lista deletada" << endl;
+    cout << "Lista deletada!\n\n";
 }
 
 int ListaNaoOrdenada::InserirNoFinal(int _id, string _nome, int _idade){
     if(ocupadas == tam){
-        cout << "Lista cheia" << endl;
+        cout << "Lista cheia!\n\n";
         return -1;
     }
 
@@ -28,7 +28,7 @@ int ListaNaoOrdenada::InserirNoFinal(int _id, string _nome, int _idade){
 
 int ListaNaoOrdenada::InserirNoInicio(int _id, string _nome, int _idade){
     if(ocupadas == tam){
-        cout << "lista cheia!" << endl;
+        cout << "Lista cheia!\n\n";
         return -1;
     }
 
@@ -54,7 +54,7 @@ int ListaNaoOrdenada::InserirNoInicio(int _id, string _nome, int _idade){
 
 int ListaNaoOrdenada::InserirNoFinal(int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria){
     if(ocupadas == tam){
-        cout << "Lista cheia" << endl;
+        cout << "Lista cheia!\n\n";
         return -1;
     }
 
@@ -65,7 +65,7 @@ int ListaNaoOrdenada::InserirNoFinal(int _id, string _nome, int _idade, string _
 
 int ListaNaoOrdenada::InserirNoInicio(int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria){
     if(ocupadas == tam){
-        cout << "lista cheia!" << endl;
+        cout << "Lista cheia!\n\n";
         return -1;
     }
 
@@ -91,7 +91,7 @@ int ListaNaoOrdenada::InserirNoInicio(int _id, string _nome, int _idade, string 
 
 int ListaNaoOrdenada::RemoverPrimeiro(){
     if(ocupadas == 0){
-        cout << "lista vazia" << endl;
+        cout << "Lista vazia!\n\n";
         return -1;
     }
 
@@ -100,13 +100,13 @@ int ListaNaoOrdenada::RemoverPrimeiro(){
     vetor[0] = vetor[ocupadas-1];
 
     ocupadas--;
-    cout << "elemento removido" << endl;
+    cout << "Elemento removido\n\n";
     return 1;
 }
 
 int ListaNaoOrdenada::RemoverPrimeiroF(){
     if(ocupadas == 0){
-        cout << "lista vazia" << endl;
+        cout << "Lista vazia!\n\n";
         return -1;
     }
 
@@ -114,19 +114,19 @@ int ListaNaoOrdenada::RemoverPrimeiroF(){
 
     for(int i = 0; i < ocupadas; i++) vetor[i] = vetor[i+1];
     ocupadas--;
-    cout << "elemento removido" << endl;
+    cout << "Elemento removido\n\n";
     return 1;
 }
 
 int ListaNaoOrdenada::RemoverUltimo(){
     if(ocupadas == 0){
-        cout << "lista vazia" << endl;
+        cout << "Lista vazia!\n\n";
         return -1;
     }
 
     delete vetor[ocupadas-1];
     ocupadas--;
-    cout << "elemento removido" << endl;
+    cout << "Elemento removido\n\n";
     return 1;
 }
 
@@ -136,20 +136,25 @@ int ListaNaoOrdenada::RemoverPeloID(int id_remova_me){
             delete vetor[i];
             vetor[i] = vetor[ocupadas-1];
             ocupadas--;
-            cout << "elemento removido" << endl;
+            cout << "Elemento removido\n\n";
             return 1;
         }
     }
 
-    cout << "elemento nao encontrado" << endl;
+    cout << "Elemento nao encontrado\n\n";
     return -1;
 }
 
 int ListaNaoOrdenada::BuscarPeloID(int id_buscado) const{
     for(int i = 0; i < ocupadas; i++){
-        if(vetor[i]->getID() == id_buscado)
+        if(vetor[i]->getID() == id_buscado){
+            cout << "Dados encontrados:" << endl;
+            vetor[i]->imprimirInfo();
             return i;
+        }
     }
+
+    cout << "ID nao encontrado\n\n";
 
     return -1;
 }
@@ -157,11 +162,11 @@ int ListaNaoOrdenada::BuscarPeloID(int id_buscado) const{
 /*int ListaNaoOrdenada::AlterarPeloID(int id_buscado, int _id, string _nome, int _idade){
     if(RemoverPeloID(id_buscado) == 1){
         InserirNoFinal(_id, _nome, _idade); //a escolha da insercao foi arbritaria
-        cout << "Substituicao bem sucedida" << endl;
+        cout << "Substituicao bem sucedida\n\n";
         return 1;
     }
 
-    cout << "Nao foi possivel efetuar a substituicao" << endl;
+    cout << "Nao foi possivel efetuar a substituicao\n\n";
     return -1;
 }*/
 
@@ -170,20 +175,23 @@ int ListaNaoOrdenada::AlterarPeloID(int id_buscado, string _nome, int _idade){
         if(id_buscado == vetor[i]->getID()){
             delete vetor[i];
             vetor[i] = new humano(id_buscado, _nome, _idade);
+            cout << "Substituicao bem sucedida\n\n";
             return 1;
         }
     }
+
+    cout << "Nao foi possivel efetuar a substituicao\n\n";
     return -1;
 }
 
 /*int ListaNaoOrdenada::AlterarPeloID(int id_buscado, int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria){
     if(RemoverPeloID(id_buscado) == 1){
         InserirNoFinal(_id, _nome, _idade, _especialidade, _salario, _carga_horaria); //a escolha da insercao foi arbritaria
-        cout << "Substituicao bem sucedida" << endl;
+        cout << "Substituicao bem sucedida\n\n";
         return 1;
     }
 
-    cout << "Nao foi possivel efetuar a substituicao" << endl;
+    cout << "Nao foi possivel efetuar a substituicao\n\n";
     return -1;
 }*/
 
@@ -192,9 +200,12 @@ int ListaNaoOrdenada::AlterarPeloID(int id_buscado, string _nome, int _idade, st
         if(id_buscado == vetor[i]->getID()){
             delete vetor[i];
             vetor[i] = new professor(id_buscado, _nome, _idade, _especialidade, _salario, _carga_horaria);
+            cout << "Substituicao bem sucedida\n\n";
             return 1;
         }
     }
+
+    cout << "ID nao encontrado\n\n";
     return -1;
 }
 

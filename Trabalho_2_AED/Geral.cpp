@@ -27,6 +27,26 @@ void dados_professor(int& _id, string& _nome, int& _idade, string& _especialidad
     cin >> _carga_horaria;
 }
 
+//função para receber todos os dados necessários para alterar um objeto da classe humano - o ID
+void dados_humano_alterar(string& _nome, int& _idade){
+    cout << "Informe o nome:\n->";
+    cin.ignore();
+    getline(cin, _nome);
+    cout << "Informe a idade:\n->";
+    cin >> _idade;
+}
+//idem para classe professor
+void dados_professor_alterar(string& _nome, int& _idade, string& _especialidade, float& _salario, int& _carga_horaria){
+    dados_humano_alterar(_nome, _idade);
+    cout << "Informe a especialidade\n->";
+    cin.ignore();
+    getline(cin, _especialidade);
+    cout << "Informe o salario:\n->";
+    cin >> _salario;
+    cout << "Informe a carga horaria:\n->";
+    cin >> _carga_horaria;
+}
+
 //gerencia o uso da lista nao ordenada. é uum menu, semelhante aos tantos que fizemos ao longo do semestre
 void glista(int tam){
     ListaNaoOrdenada l1(tam);
@@ -102,11 +122,11 @@ void glista(int tam){
             }
 
             if(tam == 1){
-                dados_humano(_id, _nome, _idade);
+                dados_humano_alterar(_nome, _idade);
                 l1.AlterarPeloID(_id, _nome, _idade);
             }
             else{
-                dados_professor(_id, _nome, _idade, _especialidade, _salario, _carga_horaria);
+                dados_professor_alterar(_nome, _idade, _especialidade, _salario, _carga_horaria);
                 l1.AlterarPeloID(_id, _nome, _idade, _especialidade, _salario, _carga_horaria);
             }
             break;
@@ -164,7 +184,7 @@ void glistaord(int tam){
         case 5:
             cout << "Qual ID deseja buscar?\n->";
             cin >> _id;
-            l1.BuscarPeloID(0, l1.getOcupadas()-1, _id);
+            l1.BuscarPeloID(_id);
             break;
         case 6:
             cout << "Qual ID deseja alterar?\n->";
@@ -177,11 +197,11 @@ void glistaord(int tam){
             }
 
             if(tam == 1){
-                dados_humano(_id, _nome, _idade);
+                dados_humano_alterar(_nome, _idade);
                 l1.AlterarPeloID(_id, _nome, _idade);
             }
             else{
-                dados_professor(_id, _nome, _idade, _especialidade, _salario, _carga_horaria);
+                dados_professor_alterar(_nome, _idade, _especialidade, _salario, _carga_horaria);
                 l1.AlterarPeloID(_id, _nome, _idade, _especialidade, _salario, _carga_horaria);
             }
             break;

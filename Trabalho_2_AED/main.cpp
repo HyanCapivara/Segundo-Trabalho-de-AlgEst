@@ -5,17 +5,21 @@
 #include "Pilha.h"
 #include "Fila.h"
 #include "Geral.h"
+#include "ListaSimplesmenteEncadeada.h"
+#include "ListaDuplamenteEncadeada.h"
+#include "ListaDuplamenteEncadeadaCircular.h"
+#include "PilhaEncadeada.h"
+#include "FilaEncadeada.h"
 
-/*Alterar pelo id deve alterar os dados associados a esse id ou colocar algo no lugar desse id?
-A busca deve retornar as informações do id achado?
-todos os metodos devem ficar retornando mensagens?*/
+/*Alterar pelo id deve alterar os dados associados a esse id ou colocar algo no "lugar" desse id?
+*/
 
 using namespace std;
 
 
 
 int main(){
-    int escolha, tam;
+    /*int escolha, tam;
 
     cout << "Que estrutura gostaria de testar:\nLista (1)\nLista Ordenada (2)\nPilha (3)\nFila (4)\n->";
     cin >> escolha;
@@ -43,8 +47,14 @@ int main(){
     case 4:
         gfila(tam);
         break;
-    }
+    }*/
 
+
+    PilhaEncadeada p1;
+    FilaEncadeada f1;
+
+    p1.consultarTopo();
+    f1.consultarFrente();
 
     return 0;
 }
