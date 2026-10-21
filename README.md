@@ -199,6 +199,7 @@ O deque basicamente é formado por duas filas. Como as filas encadeadas, com as 
 ### Árvore binária de busca
 
 | método | complexidade |
+| :--- | :---: |
 | construtor | O(1) |
 | destrutor | O(n) |
 | inserção | O(n) |
@@ -216,6 +217,7 @@ Até o presente momento, não fiz nenhum método de correção para impedir a de
 ### Grafos
 
 | método | complexidade |
+| :--- | :---: |
 | construtor | O(n) |
 | destrutor | O(n²) |
 | adicionar vértice | O(n²) |
