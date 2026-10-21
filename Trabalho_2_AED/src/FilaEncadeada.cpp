@@ -22,7 +22,7 @@ int FilaEncadeada::consultarFrente(){ //O(1)
     return -1;
 }
 
-int FilaEncadeada::retornarFrente(){
+int FilaEncadeada::retornarFrente(){ //O(1)
     if(suporte.getCabeca()->getProx() != suporte.getCabeca()) return suporte.getCabeca()->getProx()->getID();
     return -1;
 }
@@ -33,14 +33,14 @@ bool FilaEncadeada::filaVazia(){ //O(1)
 }
 
 /*
-void FilaEncadeada::enfileirarNElementos(int n){ //O(1)
+void FilaEncadeada::enfileirarNElementos(int n){ //O(n)
     while(n > 0){
         enfileirar(n);
         n--;
     }
 }
 
-void FilaEncadeada::desenfileirarNElementos(int n){ //O(1)
+void FilaEncadeada::desenfileirarNElementos(int n){ //O(n)
     while(n > 0){
         if(desenfileirar() == -1)
             break;

@@ -54,7 +54,7 @@ int Fila::desenfileirar(){ //O(n), se usar o código comentado. O(1), do jeito q
     return RemoverPrimeiroF();
 }
 
-void Fila::consultarInicio() const{ //O(1)  //Imprimi o primeiro elemento da fila
+void Fila::consultarInicio() const{ //O(1)  //Imprime o primeiro elemento da fila
     if(suporte.getOcupadas() == 0)
         cout << "Fila vazia!\n\n";
     else

@@ -11,7 +11,10 @@ ListaNaoOrdenada::ListaNaoOrdenada(int _tam) //O(1)  //construtor da lista
 
 ListaNaoOrdenada::~ListaNaoOrdenada() //O(n)
 {
-    delete[] vetor; //deleta o vetor criado. Esse processo engloba eliminar n objetos de classes derivadas de elemento
+    //deleta o vetor criado. Esse processo engloba eliminar n objetos de classes derivadas de elemento
+    for(int i = 0; i < tam; i++)
+        delete vetor[i];
+    delete[] vetor;
     cout << "Lista deletada!\n\n";
 }
 
@@ -75,7 +78,7 @@ int ListaNaoOrdenada::InserirNoInicio(int _id, string _nome, int _idade, string 
     return 1;
 }
 
-/*int ListaNaoOrdenada::InserirNoInicio_Deslocamento(int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria){
+/*int ListaNaoOrdenada::InserirNoInicio_Deslocamento(int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria){ //O(n)
     if(ocupadas == tam){
         cout << "lista cheia!" << endl;
         return -1;
@@ -112,6 +115,7 @@ int ListaNaoOrdenada::RemoverPrimeiroF(){ //O(n).  //Esse método só está aqui
     delete vetor[0]; //elimina o primeiro elemento
 
     for(int i = 0; i < ocupadas; i++) vetor[i] = vetor[i+1]; //move os demais elementos para cobrir o "buraco"
+
     ocupadas--;
     cout << "Elemento removido\n\n";
     return 1;

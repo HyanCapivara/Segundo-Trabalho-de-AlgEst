@@ -6,6 +6,7 @@ using namespace std;
 class ListaSimplesmenteEncadeada
 {
     private:
+        friend class Grafos; //permite que os grafos usem os atributos e métodos privados dessa classe. Fiz isso para usar o mesmo modelo de nó já que eu estou usando essa estrutura para a lista de adjacência
         class no{
             public:
                 no(int _id, no* _prox):ID(_id), prox(_prox){} //O(1)

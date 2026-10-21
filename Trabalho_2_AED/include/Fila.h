@@ -7,7 +7,7 @@ class Fila
 {
     public:
         Fila(int _tam):suporte(_tam){} //O(1)
-        ~Fila(){} //O(1)
+        ~Fila(){} //O(n)
         int enfileirar(int _id, string _nome, int _idade); //O(1) tanto com os métodos da lista quanto com os presentes aqui.
                                                           //Vale ressaltar que a remoção em O(1) só foi possível por ter sido adotado um padrão de lista circular
                                                          //que depende do código para inserção e remoção que se encontram abaixo, sendo códigos a parte da lista original

@@ -23,7 +23,7 @@ int PilhaEncadeada::consultarTopo(){ //O(1)
     return -1;
 }
 
-int PilhaEncadeada::retornarTopo(){
+int PilhaEncadeada::retornarTopo(){ //O(1)
     if(suporte.getCabeca()->getProx() != nullptr) return suporte.getCabeca()->getProx()->getID();
     return -1;
 }

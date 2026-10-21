@@ -5,15 +5,16 @@
 
 using namespace std;
 
-Grafos::Grafos(int _tam) //O(n), n é o tamanho de uma linha ou coluna   //construtor da classe
+Grafos::Grafos(int _tam) //O(n^2), n é o número de vértices   //construtor da classe
 {
     matrizDeAdjacencia = new int*[_tam]; //cria uma matriz de inteiros com n linhas
-    listaDeAdjacencia = new ListaDuplamenteEncadeada[_tam]; //cria uma lista com n linhas
-    for(int i = 0; i < _tam; i++){ // cria n colunas para a a matriz acima
-        matrizDeAdjacencia[i] = new int[_tam];
-    }
+    listaDeAdjacencia = new ListaSimplesmenteEncadeada[_tam]; //cria uma lista com n linhas
     tam = _tam;
     usados = _tam;
+    for(int i = 0; i < _tam; i++){ // cria n colunas para a matriz acima
+        matrizDeAdjacencia[i] = new int[_tam];
+        inicializarLinha(matrizDeAdjacencia[i]); //inicia cada linha na matriz com 0
+    }
 }
 
 Grafos::~Grafos() //O(n^2)
@@ -39,14 +40,12 @@ void Grafos::inicializarLinha(int* linha){ //O(n).  Coloca 0 em todas as entrada
 
 void Grafos::inicializarColuna(int** matriz){ //O(n).  Coloca 0 em todas as entradas de uma coluna
     for(int i = 0; i <= usados; i++)
-        for(int j = 0; j <= usados; j++){
-            matriz[i][usados] = 0;
-        }
+        matriz[i][usados] = 0;
 }
 
-void Grafos::copiarLista(ListaDuplamenteEncadeada *origem, ListaDuplamenteEncadeada *copia){ //O(n^2).  Vai passar por todos os nós armazenados na lista de adjacencia.
+void Grafos::copiarLista(ListaSimplesmenteEncadeada *origem, ListaSimplesmenteEncadeada *copia){ //O(n^2).  Vai passar por todos os nós armazenados na lista de adjacencia.
                                                                                             //No pior caso, a lista está cheia e dai teremos que passar por n listas com n elementos
-    ListaDuplamenteEncadeada::no* aux;
+    ListaSimplesmenteEncadeada::no* aux;
     for(int i = 0; i < usados; i++){
         aux = origem[i].getCabeca()->getProx();
         while(aux != nullptr){
@@ -56,7 +55,7 @@ void Grafos::copiarLista(ListaDuplamenteEncadeada *origem, ListaDuplamenteEncade
     }
 }
 
-void Grafos::AdicionarVertice(){ //O(n^2).  Se a estrutura atual não suportar mais vértices, vai ter que criar novas estruturas para armazena-los.
+void Grafos::AdicionarVertice(){ //O(n^2).  Se a estrutura atual não suportar mais vértices, o código vai ter que criar novas estruturas para armazena-los.
 //Para manter as relações anteriores, será necessário chamar os códigos de cópia acima. Mesmo no melhor caso, custa O(n)
     if(usados >= tam){
         int** matrizNova = new int*[tam*2];
@@ -67,7 +66,7 @@ void Grafos::AdicionarVertice(){ //O(n^2).  Se a estrutura atual não suportar m
             delete[] matrizDeAdjacencia[i];
         delete[] matrizDeAdjacencia;
         matrizDeAdjacencia = matrizNova;
-        ListaDuplamenteEncadeada *novaLista = new ListaDuplamenteEncadeada[tam*2];
+        ListaSimplesmenteEncadeada *novaLista = new ListaSimplesmenteEncadeada[tam*2];
         copiarLista(listaDeAdjacencia, novaLista);
         delete[] listaDeAdjacencia;
         listaDeAdjacencia = novaLista;
@@ -114,7 +113,7 @@ int Grafos::Grau(int vertice){ //O(n)
         return -1;
     }
     int n = 0;
-    ListaDuplamenteEncadeada::no* aux = listaDeAdjacencia[vertice-1].getCabeca()->getProx();
+    ListaSimplesmenteEncadeada::no* aux = listaDeAdjacencia[vertice-1].getCabeca()->getProx();
     while(aux != nullptr){ //percorre a lista para contar os vizinhos
         n++;
         aux = aux->getProx();
@@ -130,7 +129,7 @@ int Grafos::buscaEmLargura(int verticeInicial){ //O(n^2). No pior dos casos, voc
     }
     int encontrados[usados]; //evita redundância
     int verticeAtual;
-    ListaDuplamenteEncadeada::no* aux; //vai ser usado para percorrer um dado vértice
+    ListaSimplesmenteEncadeada::no* aux; //vai ser usado para percorrer um dado vértice
     inicializarLinha(encontrados);
     FilaEncadeada filaSuporte; //estrutura de suporte para o percurso
     filaSuporte.enfileirar(verticeInicial);
@@ -168,7 +167,7 @@ int Grafos::buscaEmProfundidade(int verticeInicial){ //O(n^2). Idem ao caso ante
     }
     int encontrados[usados]; //evita redundancia
     int verticeAtual;
-    ListaDuplamenteEncadeada::no* aux; //vai ser usado para percorrer um dado vertice
+    ListaSimplesmenteEncadeada::no* aux; //vai ser usado para percorrer um dado vertice
     inicializarLinha(encontrados);
     PilhaEncadeada pilhaSuporte; //estrutura de suporte para o percurso
     pilhaSuporte.empilhar(verticeInicial);

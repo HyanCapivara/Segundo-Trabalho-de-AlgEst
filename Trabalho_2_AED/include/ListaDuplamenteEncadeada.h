@@ -4,7 +4,6 @@
 class ListaDuplamenteEncadeada
 {
     private:
-        friend class Grafos; //permite que os grafos usem os atributos e métodos privados dessa classe. Fiz isso para usar o mesmo modelo de nó já que eu estou usando essa estrutura para a lista de adjacência
         class no{
             public:
                 no(int _id, no* _ant, no* _prox):ID(_id), ant(_ant), prox(_prox){} //O(1)
@@ -28,7 +27,7 @@ class ListaDuplamenteEncadeada
         ~ListaDuplamenteEncadeada(); //O(n), onde n é o número de nós armazenados
         void inserirNoInicio(int _id); //O(1)
         void inserirNoFim(int _id); //O(n)
-        int removerPeloID(int _id); //O(1)
+        int removerPeloID(int _id); //O(n)
         int removerPrimeiro(); //O(1)
         int removerUltimo(); //O(n)
         int alterarPeloID(int id_velho, int id_novo); //O(n)

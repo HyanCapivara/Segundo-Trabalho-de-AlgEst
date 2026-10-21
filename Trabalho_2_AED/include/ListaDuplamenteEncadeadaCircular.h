@@ -36,7 +36,7 @@ class ListaDuplamenteEncadeadaCircular
         int buscarPeloID(int _id) const; //O(n)
         void imprimirSentidoDireito() const; //O(n)
         void imprimirSentidoEsquerdo() const; //O(n)
-        no* getCabeca(){return cabeca;} //O(1)
+        no* getCabeca() const{return cabeca;} //O(1)
 };
 
 #endif // LISTADUPLAMENTEENCADEADACIRCULAR_H
