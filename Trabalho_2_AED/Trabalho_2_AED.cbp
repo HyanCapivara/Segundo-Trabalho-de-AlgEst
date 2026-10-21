@@ -35,19 +35,33 @@
 		</Compiler>
 		<Unit filename="Geral.cpp" />
 		<Unit filename="Geral.h" />
+		<Unit filename="include/ArvoreBinariaBusca.h" />
+		<Unit filename="include/Deque.h" />
 		<Unit filename="include/Elemento.h" />
 		<Unit filename="include/Fila.h" />
+		<Unit filename="include/FilaEncadeada.h" />
+		<Unit filename="include/Grafos.h" />
+		<Unit filename="include/ListaDuplamenteEncadeada.h" />
+		<Unit filename="include/ListaDuplamenteEncadeadaCircular.h" />
 		<Unit filename="include/ListaNaoOrdenada.h" />
 		<Unit filename="include/ListaOrdenadaID.h" />
 		<Unit filename="include/ListaSimplesmenteEncadeada.h" />
 		<Unit filename="include/Pilha.h" />
+		<Unit filename="include/PilhaEncadeada.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ArvoreBinariaBusca.cpp" />
+		<Unit filename="src/Deque.cpp" />
 		<Unit filename="src/Elemento.cpp" />
 		<Unit filename="src/Fila.cpp" />
+		<Unit filename="src/FilaEncadeada.cpp" />
+		<Unit filename="src/Grafos.cpp" />
+		<Unit filename="src/ListaDuplamenteEncadeada.cpp" />
+		<Unit filename="src/ListaDuplamenteEncadeadaCircular.cpp" />
 		<Unit filename="src/ListaNaoOrdenada.cpp" />
 		<Unit filename="src/ListaOrdenadaID.cpp" />
 		<Unit filename="src/ListaSimplesmenteEncadeada.cpp" />
 		<Unit filename="src/Pilha.cpp" />
+		<Unit filename="src/PilhaEncadeada.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

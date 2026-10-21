@@ -3,43 +3,48 @@
 
 using namespace std;
 
-FilaEncadeada::FilaEncadeada()
-{
-    //ctor
-}
+//essa classe basicamente só chama métodos da listaDuplamenteEncadeadaCircular. Não muito mais o que comentar...
 
-FilaEncadeada::~FilaEncadeada()
-{
-    //dtor
-}
-
-void FilaEncadeada::enfileirar(int _id){
+void FilaEncadeada::enfileirar(int _id){ //O(1)
     suporte.inserirNoFim(_id);
 }
 
-int FilaEncadeada::desenfileirar(){
+int FilaEncadeada::desenfileirar(){ //O(1)
     return suporte.removerPrimeiro();
 }
 
-void FilaEncadeada::consultarFrente(){
+int FilaEncadeada::consultarFrente(){ //O(1)
     if(suporte.getCabeca()->getProx() != suporte.getCabeca()){
         suporte.getCabeca()->getProx()->imprimirInfo();
+        return suporte.getCabeca()->getProx()->getID();
     }
-    else
-        cout << "Fila vazia\n\n";
+    cout << "Fila vazia\n\n";
+    return -1;
 }
 
-void FilaEncadeada::enfileirarNElementos(int n){
+int FilaEncadeada::retornarFrente(){
+    if(suporte.getCabeca()->getProx() != suporte.getCabeca()) return suporte.getCabeca()->getProx()->getID();
+    return -1;
+}
+
+bool FilaEncadeada::filaVazia(){ //O(1)
+    if(suporte.getCabeca()->getProx() == suporte.getCabeca()) return 1; //nesse caso, como essa fila deriva de uma lista circular, a condição para estar vazia é apontar para a própria cabeça
+    return 0;
+}
+
+/*
+void FilaEncadeada::enfileirarNElementos(int n){ //O(1)
     while(n > 0){
         enfileirar(n);
         n--;
     }
 }
 
-void FilaEncadeada::desenfileirarNElementos(int n){
+void FilaEncadeada::desenfileirarNElementos(int n){ //O(1)
     while(n > 0){
         if(desenfileirar() == -1)
             break;
         n--;
     }
 }
+*/

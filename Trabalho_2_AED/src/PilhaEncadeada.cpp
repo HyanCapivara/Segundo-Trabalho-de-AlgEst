@@ -3,43 +3,47 @@
 
 using namespace std;
 
-PilhaEncadeada::PilhaEncadeada()
-{
+//essa classe basicamente chama os métodos da lista simplesmente encadeada
 
+void PilhaEncadeada::empilhar(int _id){ //O(1)
+    suporte.inserirNoInicio(_id); //chama o inserir no inicio
 }
 
-PilhaEncadeada::~PilhaEncadeada()
-{
-
+int PilhaEncadeada::desempilhar(){ //O(1)
+    return suporte.removerPrimeiro(); //chama o remover primeiro
 }
 
-void PilhaEncadeada::empilhar(int _id){
-    suporte.inserirNoInicio(_id);
-}
-
-int PilhaEncadeada::desempilhar(){
-    return suporte.removerPrimeiro();
-}
-
-void PilhaEncadeada::consultarTopo(){
-    if(suporte.getCabeca()->getProx() != nullptr){
-        suporte.getCabeca()->getProx()->imprimirInfo();
+int PilhaEncadeada::consultarTopo(){ //O(1)
+    if(suporte.getCabeca()->getProx() != nullptr){ //se a cabeça aponta para alguém:
+        suporte.getCabeca()->getProx()->imprimirInfo(); //imprime a informação desse alguém
+        return suporte.getCabeca()->getProx()->getID();
     }
-    else
-        cout << "Pilha vazia\n\n";
+    //se a cabeça não apontar para ninguém:
+    cout << "Pilha vazia\n\n";
+    return -1;
 }
 
-void PilhaEncadeada::empilharNElementos(int n){
-    while(n > 0){
+int PilhaEncadeada::retornarTopo(){
+    if(suporte.getCabeca()->getProx() != nullptr) return suporte.getCabeca()->getProx()->getID();
+    return -1;
+}
+
+/*void PilhaEncadeada::empilharNElementos(int n){ //O(n)
+    while(n > 0){ //faz n empilhamentos
         empilhar(n);
         n--;
     }
 }
 
-void PilhaEncadeada::desempilharNElementos(int n){
-    while(n > 0){
+void PilhaEncadeada::desempilharNElementos(int n){ //O(n)
+    while(n > 0){  //tenta fazer n desempilhamentos
         if(desempilhar() == -1)
             break;
         n--;
     }
+}*/
+
+bool PilhaEncadeada::pilhaVazia(){ //O(1)
+    if(suporte.getCabeca()->getProx() == nullptr) return 1; //vê se a cabeça aponta para alguém, se não aponta, a lista está vazia
+    return 0;
 }

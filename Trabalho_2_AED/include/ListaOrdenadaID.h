@@ -6,33 +6,29 @@
 class ListaOrdenadaID
 {
     public:
-        ListaOrdenadaID(int _tam);
-        ~ListaOrdenadaID();
+        ListaOrdenadaID(int _tam); //O(1)
+        ~ListaOrdenadaID(); //O(n)
 
-        int BuscaBinaria(int ini, int fim, int id_buscado) const;
-        int BuscarPeloID(int id_buscado) const;
+        int BuscaBinaria(int ini, int fim, int id_buscado) const; //O(logn)
+        int BuscarPeloID(int id_buscado) const; //O(logn)
 
-        /*int InserirNoFinal(int _id, int _idade, string _nome);
-        int InserirNoInicio(int _id, int _idade, string _nome);*/ //<- vai rolar não amigão. Essa liberdade destroi a ordem!
-        int InserirOrdenadamente(int _id, string _nome, int _idade);
+        int InserirOrdenadamente(int _id, string _nome, int _idade); //O(n)
 
-        /*int InserirNoFinal(nt _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria);
-        int InserirNoInicio(nt _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria);*/
-        int InserirOrdenadamente(int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria);
+        int InserirOrdenadamente(int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria); //O(n)
 
-        int RemoverPrimeiro(); //um pouco particular mas pode manter
-        int RemoverUltimo(); //idem ao acima
-        int RemoverPeloID(int id_remova_me);
+        int RemoverPrimeiro(); //O(n)
+        int RemoverUltimo(); //O(1)
+        int RemoverPeloID(int id_remova_me); //O(n)
 
-        //int AlterarPeloID(int id_buscado, int _id, string _nome, int _idade);
-        int AlterarPeloID(int id_buscado, string _nome, int _idade);
+        int AlterarPeloID(int id_buscado, int _id, string _nome, int _idade); //O(n)
+        //int AlterarPeloID(int id_buscado, string _nome, int _idade); //O(n)
 
-        //int AlterarPeloID(int id_buscado, int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria);
-        int AlterarPeloID(int id_buscado, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria);
+        int AlterarPeloID(int id_buscado, int _id, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria); //O(n)
+        //int AlterarPeloID(int id_buscado, string _nome, int _idade, string _especialidade, float _salario, int _carga_horaria); //O(n)
 
-        void ImprimirLista() const;
+        void ImprimirLista() const; //O(n)
 
-        int getOcupadas() const{return ocupadas;}
+        int getOcupadas() const{return ocupadas;} //O(1)
 
     private:
         int tam;

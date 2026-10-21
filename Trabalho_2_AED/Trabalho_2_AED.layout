@@ -2,79 +2,149 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="src/ListaOrdenadaID.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/PilhaEncadeada.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3386" topLine="165" />
+			<Cursor1 position="774" topLine="7" />
 		</Cursor>
 	</File>
 	<File name="src/Pilha.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="538" topLine="1" />
+			<Cursor1 position="1504" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="src/ListaNaoOrdenada.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/ListaSimplesmenteEncadeada.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5536" topLine="191" />
+			<Cursor1 position="1258" topLine="20" />
 		</Cursor>
 	</File>
-	<File name="src/Fila.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/ListaOrdenadaID.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1546" topLine="35" />
+			<Cursor1 position="6003" topLine="160" />
 		</Cursor>
 	</File>
-	<File name="src/Elemento.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/ListaNaoOrdenada.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="397" topLine="4" />
+			<Cursor1 position="7825" topLine="138" />
 		</Cursor>
 	</File>
-	<File name="src/ListaSimplesmenteEncadeada.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/ListaDuplamenteEncadeadaCircular.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="973" topLine="18" />
+			<Cursor1 position="4657" topLine="127" />
 		</Cursor>
 	</File>
-	<File name="include/Elemento.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/ListaDuplamenteEncadeada.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="583" topLine="0" />
+			<Cursor1 position="940" topLine="66" />
 		</Cursor>
 	</File>
-	<File name="include/ListaSimplesmenteEncadeada.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/Fila.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="755" topLine="5" />
+			<Cursor1 position="1396" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Geral.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/Deque.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="301" topLine="0" />
+			<Cursor1 position="61" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Geral.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include/FilaEncadeada.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4570" topLine="106" />
+			<Cursor1 position="444" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include/ListaDuplamenteEncadeada.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="252" topLine="0" />
+			<Cursor1 position="114" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="include/Fila.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include/Deque.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="691" topLine="0" />
+			<Cursor1 position="198" topLine="2" />
 		</Cursor>
 	</File>
-	<File name="include/Pilha.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include/Pilha.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="438" topLine="0" />
+			<Cursor1 position="563" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Geral.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21854" topLine="622" />
+		</Cursor>
+	</File>
+	<File name="src/FilaEncadeada.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="662" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="include/Fila.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1222" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="Geral.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="450" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include/Grafos.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="381" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include/PilhaEncadeada.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="430" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include/Elemento.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1209" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src/ArvoreBinariaBusca.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7115" topLine="198" />
+		</Cursor>
+	</File>
+	<File name="src/Grafos.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3900" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include/ArvoreBinariaBusca.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1108" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="include/ListaDuplamenteEncadeadaCircular.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1334" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="include/ListaNaoOrdenada.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2388" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="include/ListaSimplesmenteEncadeada.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1037" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include/ListaOrdenadaID.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="267" topLine="0" />
+			<Cursor1 position="1105" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include/ListaNaoOrdenada.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src/Elemento.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1864" topLine="0" />
+			<Cursor1 position="1409" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2531" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

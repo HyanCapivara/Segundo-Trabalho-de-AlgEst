@@ -1,60 +1,107 @@
 #include <iostream>
 #include <string>
+
+#include "Geral.h" //tem uns menus
+//listas de alocação sequencial e derivados
 #include "ListaNaoOrdenada.h"
 #include "ListaOrdenadaID.h"
 #include "Pilha.h"
 #include "Fila.h"
-#include "Geral.h"
+//listas de alocação dinâmica e derivados
 #include "ListaSimplesmenteEncadeada.h"
 #include "ListaDuplamenteEncadeada.h"
 #include "ListaDuplamenteEncadeadaCircular.h"
 #include "PilhaEncadeada.h"
 #include "FilaEncadeada.h"
-
-/*Alterar pelo id deve alterar os dados associados a esse id ou colocar algo no "lugar" desse id?
-*/
+#include "ArvoreBinariaBusca.h"
+#include "Grafos.h"
 
 using namespace std;
 
-
-
 int main(){
-    /*int escolha, tam;
+    int escolha, tam;
 
-    cout << "Que estrutura gostaria de testar:\nLista (1)\nLista Ordenada (2)\nPilha (3)\nFila (4)\n->";
+    cout << "Gostaria de testar as Listas nao ordenadas? (sim = 1, nao = ~1)\n->";
     cin >> escolha;
-    while(escolha > 4 || escolha < 1){
-        cout << "Escolha uma alternativa valida\n->";
-        cin >> escolha;
-    }
-    cout << "Que tamanho voce deseja para a estrutura\n->";
-    cin >> tam;
-    while(tam <= 0){
-        cout << "Favor escolher um tamanho positivo\n->";
+    if(escolha == 1){
+        cout << "Qual tamanho deseja para a lista?\n->";
         cin >> tam;
+        while(tam < 0){
+            cout << "Favor informe um numero positivo\n->";
+            cin >> tam;
+        }
+        glista(tam);
     }
 
-    switch(escolha){
-    case 1:
-        glista(tam);
-        break;
-    case 2:
+    cout << "Gostaria de testar as Listas ordenadas? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1){
+        cout << "Qual tamanho deseja para a lista?\n->";
+        cin >> tam;
+        while(tam < 0){
+            cout << "Favor informe um numero positivo\n->";
+            cin >> tam;
+        }
         glistaord(tam);
-        break;
-    case 3:
+    }
+
+    cout << "Gostaria de testar as pilhas? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1){
+        cout << "Qual tamanho deseja para a pilha?\n->";
+        cin >> tam;
+        while(tam < 0){
+            cout << "Favor informe um numero positivo\n->";
+            cin >> tam;
+        }
         gpilha(tam);
-        break;
-    case 4:
+    }
+
+    cout << "Gostaria de testar as filas? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1){
+        cout << "Qual tamanho deseja para a fila?\n->";
+        cin >> tam;
+        while(tam < 0){
+            cout << "Favor informe um numero positivo\n->";
+            cin >> tam;
+        }
         gfila(tam);
-        break;
-    }*/
+    }
+
+    cout << "Gostaria de testar as Listas simplesmente encadeadas? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1)
+        glistaSimples();
+
+    cout << "Gostaria de testar as Listas duplamente encadeadas? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1)
+        glistaDuplamente();
+
+    cout << "Gostaria de testar as Listas duplamente encadeadas circulares? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1)
+        glistaCircular();
+
+    cout << "Gostaria de testar as Arvores? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1)
+        gArvore();
+
+    cout << "Gostaria de testar os grafos? (sim = 1, nao = ~1)\n->";
+    cin >> escolha;
+    if(escolha == 1){
+        cout << "Informe uma quantidade inicial de vertices\n->";
+        cin >> tam;
+        while(tam < 0){
+            cout << "Favor informe um numero positivo\n->";
+            cin >> tam;
+        }
+        gGrafos(tam);
+    }
 
 
-    PilhaEncadeada p1;
-    FilaEncadeada f1;
-
-    p1.consultarTopo();
-    f1.consultarFrente();
 
     return 0;
 }

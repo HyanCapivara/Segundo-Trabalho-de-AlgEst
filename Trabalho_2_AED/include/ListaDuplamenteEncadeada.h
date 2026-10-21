@@ -4,16 +4,17 @@
 class ListaDuplamenteEncadeada
 {
     private:
+        friend class Grafos; //permite que os grafos usem os atributos e métodos privados dessa classe. Fiz isso para usar o mesmo modelo de nó já que eu estou usando essa estrutura para a lista de adjacência
         class no{
             public:
-                no(int _id, no* _ant, no* _prox):ID(_id), ant(_ant), prox(_prox){}
-                ~no(){}
-                int getID() const{return ID;}
-                void setProx(no* _prox){prox = _prox;}
-                no* getProx() const{return prox;}
-                void setAnt(no* _ant){ant = _ant;}
-                no* getAnt() const{return ant;}
-                void imprimirInfo() const;
+                no(int _id, no* _ant, no* _prox):ID(_id), ant(_ant), prox(_prox){} //O(1)
+                ~no(){} //O(1)
+                int getID() const{return ID;} //O(1)
+                void setProx(no* _prox){prox = _prox;} //O(1)
+                no* getProx() const{return prox;} //O(1)
+                void setAnt(no* _ant){ant = _ant;} //O(1)
+                no* getAnt() const{return ant;} //O(1)
+                void imprimirInfo() const; //O(1)
             private:
                 int ID;
                 no* ant;
@@ -23,16 +24,18 @@ class ListaDuplamenteEncadeada
         no* cabeca = new no(0, nullptr, nullptr);
 
     public:
-        ListaDuplamenteEncadeada();
-        ~ListaDuplamenteEncadeada();
-        void inserirNoInicio(int _id);
-        void inserirNoFim(int _id);
-        int removerPeloID(int _id);
-        int removerPrimeiro();
-        int removerUltimo();
-        //int alterarPeloID(); <- preguicei. termina depois
-        int buscarPeloID(int _id) const;
-        void imprimirLista() const;
+        ListaDuplamenteEncadeada(); //O(1)
+        ~ListaDuplamenteEncadeada(); //O(n), onde n é o número de nós armazenados
+        void inserirNoInicio(int _id); //O(1)
+        void inserirNoFim(int _id); //O(n)
+        int removerPeloID(int _id); //O(1)
+        int removerPrimeiro(); //O(1)
+        int removerUltimo(); //O(n)
+        int alterarPeloID(int id_velho, int id_novo); //O(n)
+        int buscarPeloID(int _id) const; //O(n)
+        void imprimirLista() const; //O(n)
+
+        no* getCabeca(){return cabeca;} //O(1)  //para ser usado nos grafos
 };
 
 #endif // LISTADUPLAMENTEENCADEADA_H
